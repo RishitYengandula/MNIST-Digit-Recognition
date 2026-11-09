@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Testing and cache
+.pytest_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# Datasets (MNIST raw and processed archives)
+data/MNIST/
+data/raw/
+data/*.gz
+
+# Training and runtime artifacts
+*.log
+*.tmp
+runs/
+wandb/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+

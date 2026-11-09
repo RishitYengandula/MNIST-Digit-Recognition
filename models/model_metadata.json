@@ -1,0 +1,18 @@
+{
+  "project": "mnist-digit-recognition",
+  "model_architecture": "MNISTCNN",
+  "best_epoch": 12,
+  "best_val_loss": 0.015066,
+  "best_val_acc": 0.9955,
+  "epochs_trained": 15,
+  "training_duration_seconds": 347.69,
+  "normalization": {
+    "mean": [
+      0.1307
+    ],
+    "std": [
+      0.3081
+    ]
+  },
+  "training_timestamp": "2026-11-02T20:34:33Z"
+}

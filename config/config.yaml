@@ -1,0 +1,55 @@
+project:
+  name: "mnist-digit-recognition"
+  description: "Handwritten Digit Recognition using a Convolutional Neural Network (CNN) in PyTorch"
+  version: "1.0.0"
+
+reproducibility:
+  seed: 42
+
+image:
+  channels: 1
+  height: 28
+  width: 28
+
+dataset:
+  name: "MNIST"
+  raw_train_samples: 60000
+  test_samples: 10000
+  train_samples: 50000
+  val_samples: 10000
+  num_classes: 10
+  normalization:
+    mean: [0.1307]
+    std: [0.3081]
+  augmentation:
+    rotation_degrees: 10
+    translate: [0.07, 0.07]  # ~2 pixels on 28x28
+    scale: [0.95, 1.05]
+    allow_flips: false
+
+training:
+  batch_size: 64
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  max_epochs: 15
+  early_stopping_patience: 3
+  lr_scheduler:
+    factor: 0.5
+    patience: 2
+    min_lr: 1.0e-6
+
+paths:
+  data_dir: "data"
+  models_dir: "models"
+  best_model_path: "models/best_model.pth"
+  model_metadata_path: "models/model_metadata.json"
+  training_history_path: "models/training_history.json"
+  reports_dir: "reports"
+  figures_dir: "reports/figures"
+  evaluation_results_path: "reports/evaluation_results.json"
+  classification_report_path: "reports/classification_report.json"
+  confusion_matrix_path: "reports/figures/confusion_matrix.png"
+  confusion_matrix_norm_path: "reports/figures/confusion_matrix_normalized.png"
+  training_curves_path: "reports/figures/training_curves.png"
+  error_analysis_path: "reports/figures/error_analysis.png"
+
